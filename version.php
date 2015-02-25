@@ -19,16 +19,9 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-<<<<<<< HEAD
-$plugin->version = 2013092600;        // The current plugin version (Date: YYYYMMDDXX).
-$plugin->requires = 2013051400;        // Requires this Moodle version.
+$plugin->version = 2015022000;        // The current plugin version (Date: YYYYMMDDXX).
+$plugin->requires = 2014051400;        // Requires this Moodle version.
 $plugin->component = 'format_tabtopics';    // Full name of the plugin (used for diagnostics).
 $plugin->maturity = MATURITY_STABLE;
-$plugin->release = '2.5.2 (Build: 2013092600)';
-=======
-$plugin->version = 2014040200;        // The current plugin version (Date: YYYYMMDDXX).
-$plugin->requires = 2013051400;        // Requires this Moodle version.
-$plugin->component = 'format_tabtopics';    // Full name of the plugin (used for diagnostics).
-$plugin->maturity = MATURITY_STABLE;
-$plugin->release = '2.6.0 (Build: 2014040200)';
->>>>>>> master
+$plugin->release = '2.7.0 (Build: 2014092600)';
+
