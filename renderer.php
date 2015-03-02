@@ -108,13 +108,8 @@ class format_tabtopics_renderer extends format_section_renderer_base
      * 
      * @param type $section
      */
-<<<<<<< HEAD
-    public function section_hidden($section) {
-        echo parent::section_hidden($section);
-=======
     public function section_hidden($section,$courseorid = NULL) {
         echo parent::section_hidden($section,$courseorid = NULL);
->>>>>>> master
     }
     
 }
