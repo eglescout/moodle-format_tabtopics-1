@@ -135,7 +135,6 @@ if (!$PAGE->user_is_editing())
             echo $OUTPUT->heading(format_string($thissection->name, true, array('context' => $context)), 3, 'sectionname');
         }
 
-        echo '<div class="summary">';
 
         //Replace get_context_instance by the class for moodle 2.6+
         if(class_exists('context_module'))
@@ -150,8 +149,9 @@ if (!$PAGE->user_is_editing())
         $summaryformatoptions = new stdClass;
         $summaryformatoptions->noclean = true;
         $summaryformatoptions->overflowdiv = true;
+        //TODO: create an if statement only display this div and echo if $summarytext has something in it
+        echo '<div class="summary">';
         echo format_text($summarytext, $thissection->summaryformat, $summaryformatoptions);
-
         echo '</div>';
 
         //if section is not a tab, display as a header
