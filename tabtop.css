@@ -121,9 +121,3 @@ ul.sectionul>li
 {
     margin-bottom: 1px; /* for overlap (mapped to tabview-list border-width) */
 }
-
-ul.sectionul li
-{
-    list-style-type: none;
-}
->>>>>>> master
