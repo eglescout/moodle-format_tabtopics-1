@@ -149,10 +149,14 @@ if (!$PAGE->user_is_editing())
         $summaryformatoptions = new stdClass;
         $summaryformatoptions->noclean = true;
         $summaryformatoptions->overflowdiv = true;
-        //TODO: create an if statement only display this div and echo if $summarytext has something in it
-        echo '<div class="summary">';
-        echo format_text($summarytext, $thissection->summaryformat, $summaryformatoptions);
-        echo '</div>';
+        
+        //display this div and echo if there is any summary text
+        if (!empty($thissection->summary)) 
+        {
+            echo '<div class="summary">';
+            echo format_text($summarytext, $thissection->summaryformat, $summaryformatoptions);
+            echo '</div>';
+        }
 
         //if section is not a tab, display as a header
         if (!$isZeroTab)
@@ -389,9 +393,10 @@ if (!$PAGE->user_is_editing())
                     //output header for section
                     echo $OUTPUT->heading($display, 3, 'sectionname');
 
-                    echo '<div class="summary">';
+                    
                     if ($thissection->summary)
                     {
+                        echo '<div class="summary">';
                         //Replace get_context_instance by the class for moodle 2.6+
                         if(class_exists('context_module'))
                         {
@@ -406,6 +411,7 @@ if (!$PAGE->user_is_editing())
                         $summaryformatoptions->noclean = true;
                         $summaryformatoptions->overflowdiv = true;
                         echo format_text($summarytext, $thissection->summaryformat, $summaryformatoptions);
+                        echo '</div>';
                     }
                     else
                     {
@@ -426,7 +432,7 @@ if (!$PAGE->user_is_editing())
                         echo ' <a title="' . $streditsummary . '" href="editsection.php?id=' . $thissection->id . '">' .
                         '<img src="' . $OUTPUT->pix_url('t/edit') . '" class="icon edit" alt="' . $streditsummary . '" /></a><br /><br />';
                     }
-                    echo '</div>';
+                    
 
 
                     echo $corerenderer->course_section_cm_list($course, $section);

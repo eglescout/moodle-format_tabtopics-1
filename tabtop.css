@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /**
  * *************************************************************************
  * *                 OOHOO Tab topics Course format                       **
@@ -13,75 +12,6 @@
  * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later  **
  * *************************************************************************
  * ************************************************************************ */
-
-
-
-/* The border under tabs */
-.yui3-skin-sam .yui3-tabview-list
-{
-    border-bottom-color: #2647A0;
-}
-
-/*The regular tab style*/
-.yui3-skin-sam .yui3-tab-label
-{
-    background: url("pix/gradient.png") repeat-x scroll 0 0 #efefef;
-}
-
-/*The regular tab style hover*/
-.yui3-skin-sam .yui3-tab-label:focus,
-.yui3-skin-sam .yui3-tab-label:hover
-{
-    background: url("pix/gradient.png") repeat-x scroll 0 0 #EDF5FF;
-}
-
-/*The selected tab border color*/
-.yui3-skin-sam .yui3-tab-selected .yui3-tab-label, 
-.yui3-skin-sam .yui3-tab-selected .yui3-tab-label:focus, 
-.yui3-skin-sam .yui3-tab-selected .yui3-tab-label:hover
-{
-    border-color: #243356;
-    background: url("pix/gradient.png") repeat-x scroll 0 0 #2647A0;
-}
-
-/*The text color inside the selected tab*/
-.yui3-skin-sam .yui3-tab-selected a {		
-		color:#fff !important;
-}
-
-
-/*The tab content background color*/
-.yui3-skin-sam .yui3-tabview-panel
-{
-    background-color: #EDF5FF;
-}
-
-.yui3-skin-sam .yui3-tab-selected #marker
-{
-    margin-bottom: 1px; /* for overlap (mapped to tabview-list border-width) */
-}
-
-ul.sectionul>li
-{
-    list-style-type: none;
-}
-=======
-/**
- * *************************************************************************
- * *                 OOHOO Tab topics Course format                       **
- * *************************************************************************
- * @package     format                                                    **
- * @subpackage  tabtopics                                                 **
- * @name        tabtopics                                                 **
- * @copyright   oohoo.biz                                                 **
- * @link        http://oohoo.biz                                          **
- * @author      Nicolas Bretin                                            **
- * @author      Braedan Jongerius                                         **
- * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later  **
- * *************************************************************************
- * ************************************************************************ */
-
-
 
 /* The border under tabs */
 .yui3-skin-sam .yui3-tabview-list
@@ -120,4 +50,16 @@ ul.sectionul>li
 .yui3-skin-sam .yui3-tab-selected #marker
 {
     margin-bottom: 1px; /* for overlap (mapped to tabview-list border-width) */
+}
+
+/* remove extra whitespace at top inside of tabs */
+.yui3-tab-panel h3.sectionname 
+{
+    margin: 8px 8px 0 8px;
+    line-height: 30px;
+    font-size: 210%;
+}
+.sectionname + ul.section
+{
+    margin-top: 0;
 }
